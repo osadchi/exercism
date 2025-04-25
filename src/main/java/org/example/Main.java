@@ -1,5 +1,10 @@
 package org.example;
 
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -14,25 +19,31 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
-        PhoneNumberTest test = new PhoneNumberTest();
-        test.cleansNumbersWithMultipleSpaces();
-        test.cleansNumbersWithDots();
-        test.cleansTheNumber();
-        test.invalidIfAreaCodeStartsWith0();
-        test.invalidIfAreaCodeStartsWith0OnValid11DigitNumber();
-        test.invalidIfAreaCodeStartsWith1();
-        test.invalidIfAreaCodeStartsWith1OnValid11DigitNumber();
-        test.invalidIfExchangeCodeStartsWith0();
-        test.invalidIfExchangeCodeStartsWith0OnValid11DigitNumber();
-        test.invalidIfExchangeCodeStartsWith1();
-        test.invalidIfExchangeCodeStartsWith1OnValid11DigitNumber();
-        test.invalidWhen9Digits();
-        test.invalidWhen11DigitsDoesNotStartWith1();
-        test.invalidWhenMoreThan11Digits();
-        test.invalidWithLetters();
-        test.invalidWithPunctuations();
-        test.validWhen11DigitsAndStartingWith1();
-        test.validWhen11DigitsAndStartingWith1EvenWithPunctuation();
+        PigLatinTranslatorTest test = new PigLatinTranslatorTest();
+        test.setup();
+        test.testWordBeginningWithA();
+        test.testWordBeginningWithE();
+        test.testWordBeginningWithI();
+        test.testWordBeginningWithO();
+        test.testWordBeginningWithU();
+        test.testWordBeginningWithVowelAndFollowedByQu();
+        test.testWordBeginningWithP();
+        test.testWordBeginningWithK();
+        test.testWordBeginningWithX();
+        test.testWordBeginningWithQWithoutAFollowingU();
+        test.testWordBeginningWithConsonantAndVowelContainingQu();
+        test.testChTreatedLikeAConsonantAtTheBeginningOfAWord();
+        test.testQuTreatedLikeAConsonantAtTheBeginningOfAWord();
+        test.testQuAndAPrecedingConsonantTreatedLikeAConsonantAtTheBeginningOfAWord();
+        test.testThTreatedLikeAConsonantAtTheBeginningOfAWord();
+        test.testThrTreatedLikeAConsonantAtTheBeginningOfAWord();
+        test.testSchTreatedLikeAConsonantAtTheBeginningOfAWord();
+        test.testYtTreatedLikeAVowelAtTheBeginningOfAWord();
+        test.testXrTreatedLikeAVowelAtTheBeginningOfAWord();
+        test.testYTreatedLikeAConsonantAtTheBeginningOfAWord();
+        test.testYTreatedLikeAVowelAtTheEndOfAConsonantCluster();
+        test.testYAsSecondLetterInTwoLetterWord();
+        test.testAWholePhrase();
 
     }
 }
