@@ -14,13 +14,15 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
-        NucleotideCounterTest test = new NucleotideCounterTest();
-        test.testDnaStringHasInvalidNucleotides();
-        test.testDnaStringHasMultipleNucleotide();
-        test.testDnaStringHasOneNucleotide();
-        test.testEmptyDnaStringHasNoNucleotides();
-        test.testRepetitiveSequenceWithOnlyGuanine();
-
+        PascalsTriangleGeneratorTest test = new PascalsTriangleGeneratorTest();
+        test.testTriangleWithSixRows();
+        test.testTriangleWithOneRow();
+        test.testTriangleWithFourRows();
+        test.testTriangleWithFiveRows();
+        test.testTriangleWithTwoRows();
+        test.testTriangleWithThreeRows();
+        test.testTriangleWithTenRows();
+        test.testTriangleWithZeroRows();
 
     }
 }
