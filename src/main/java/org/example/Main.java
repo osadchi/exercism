@@ -14,15 +14,25 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
-        PascalsTriangleGeneratorTest test = new PascalsTriangleGeneratorTest();
-        test.testTriangleWithSixRows();
-        test.testTriangleWithOneRow();
-        test.testTriangleWithFourRows();
-        test.testTriangleWithFiveRows();
-        test.testTriangleWithTwoRows();
-        test.testTriangleWithThreeRows();
-        test.testTriangleWithTenRows();
-        test.testTriangleWithZeroRows();
+        PhoneNumberTest test = new PhoneNumberTest();
+        test.cleansNumbersWithMultipleSpaces();
+        test.cleansNumbersWithDots();
+        test.cleansTheNumber();
+        test.invalidIfAreaCodeStartsWith0();
+        test.invalidIfAreaCodeStartsWith0OnValid11DigitNumber();
+        test.invalidIfAreaCodeStartsWith1();
+        test.invalidIfAreaCodeStartsWith1OnValid11DigitNumber();
+        test.invalidIfExchangeCodeStartsWith0();
+        test.invalidIfExchangeCodeStartsWith0OnValid11DigitNumber();
+        test.invalidIfExchangeCodeStartsWith1();
+        test.invalidIfExchangeCodeStartsWith1OnValid11DigitNumber();
+        test.invalidWhen9Digits();
+        test.invalidWhen11DigitsDoesNotStartWith1();
+        test.invalidWhenMoreThan11Digits();
+        test.invalidWithLetters();
+        test.invalidWithPunctuations();
+        test.validWhen11DigitsAndStartingWith1();
+        test.validWhen11DigitsAndStartingWith1EvenWithPunctuation();
 
     }
 }
