@@ -3,6 +3,9 @@ package org.example;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -19,20 +22,14 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
-        PrimeFactorsCalculatorTest test = new PrimeFactorsCalculatorTest();
+        RobotTest test = new RobotTest();
+
         test.setUp();
-        test.testNoFactors();
-        test.testPrimeNumber();
-        test.testAnotherPrimeNumber();
-        test.testSquareOfAPrime();
-        test.testProductOfFirstPrime();
-        test.testCubeOfAPrime();
-        test.testProductOfSecondPrime();
-        test.testProductOfThirdPrime();
-        test.testProductOfFirstAndSecondPrime();
-        test.testProductOfPrimesAndNonPrimes();
-        test.testProductOfPrimes();
-        test.testFactorsIncludingALargePrime();
+        test.hasName();
+        test.sameRobotsHaveSameNames();
+        test.differentRobotsHaveDifferentNames();
+        test.resetName();
+        test.robotNamesAreUnique();
 
     }
 }
