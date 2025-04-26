@@ -1,6 +1,7 @@
 package org.example;
 
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -22,18 +23,13 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
-        SeriesTest test = new SeriesTest();
-        test.slicesOfOneFromOne();
-        test.slicesOfOneFromTwo();
-        test.slicesOfTwo();
-        test.slicesOfTwoOverlap();
-        test.slicesIncludeDuplicates();
-        test.slicesOfLongSeries();
-        test.sliceLengthIsToolarge();
-        test.sliceLengthIsWayToolarge();
-        test.sliceLengthZero();
-        test.sliceLengthNegative();
-        test.emptySeries();
+        SquareRootTest test = new SquareRootTest();
+        test.squareRootOf1();
+        test.squareRootOf4();
+        test.squareRootOf25();
+        test.squareRootOf81();
+        test.squareRootOf196();
+        test.squareRootOf65025();
 
     }
 }
