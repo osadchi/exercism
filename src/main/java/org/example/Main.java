@@ -3,10 +3,10 @@ package org.example;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -22,21 +22,18 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
-        RunLengthEncodingTest test = new RunLengthEncodingTest();
-        test.setUp();
-        test.encodeEmpty();
-        test.encodeWithOnlySingleValues();
-        test.encodeWithNoSingleValues();
-        test.encodeWithMixedValues();
-        test.encodeWithWhitespaceValues();
-        test.encodeWithLowercaseValues();
-        test.decodeEmpty();
-        test.decodeWithOnlySingleValues();
-        test.decodeWithNoSingleValues();
-        test.decodeWithMixedValues();
-        test.decodeWithWhitespaceValues();
-        test.decodeWithLowercaseValues();
-        test.encodeThenDecode();
+        SeriesTest test = new SeriesTest();
+        test.slicesOfOneFromOne();
+        test.slicesOfOneFromTwo();
+        test.slicesOfTwo();
+        test.slicesOfTwoOverlap();
+        test.slicesIncludeDuplicates();
+        test.slicesOfLongSeries();
+        test.sliceLengthIsToolarge();
+        test.sliceLengthIsWayToolarge();
+        test.sliceLengthZero();
+        test.sliceLengthNegative();
+        test.emptySeries();
 
     }
 }
