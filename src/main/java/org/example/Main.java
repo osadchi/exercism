@@ -13,23 +13,23 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-//        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-//        // to see how IntelliJ IDEA suggests fixing it.
-//        System.out.printf("Hello and welcome!");
-//
-//        for (int i = 1; i <= 5; i++) {
-//            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-//            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-//            System.out.println("i = " + i);
-//        }
 
-        SquareRootTest test = new SquareRootTest();
-        test.squareRootOf1();
-        test.squareRootOf4();
-        test.squareRootOf25();
-        test.squareRootOf81();
-        test.squareRootOf196();
-        test.squareRootOf65025();
+        WordCountTest test = new WordCountTest();
+        test.setup();
+        test.countOneWord();
+        test.countOneOfEachWord();
+        test.multipleOccurrencesOfAWord();
+        test.handlesCrampedLists();
+        test.handlesExpandedLists();
+        test.ignorePunctuation();
+        test.includeNumbers();
+        test.normalizeCase();
+        test.withApostrophes();
+        test.substringsFromTheBeginning();
+        test.withQuotations();
+        test.multipleSpacesNotDetectedAsAWord();
+        test.alternatingWordSeperatorsNotDetectedAsAWord();
+        test.quotationForWordWithApostrophe();
 
     }
 }
