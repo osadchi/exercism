@@ -19,31 +19,20 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
-        PigLatinTranslatorTest test = new PigLatinTranslatorTest();
-        test.setup();
-        test.testWordBeginningWithA();
-        test.testWordBeginningWithE();
-        test.testWordBeginningWithI();
-        test.testWordBeginningWithO();
-        test.testWordBeginningWithU();
-        test.testWordBeginningWithVowelAndFollowedByQu();
-        test.testWordBeginningWithP();
-        test.testWordBeginningWithK();
-        test.testWordBeginningWithX();
-        test.testWordBeginningWithQWithoutAFollowingU();
-        test.testWordBeginningWithConsonantAndVowelContainingQu();
-        test.testChTreatedLikeAConsonantAtTheBeginningOfAWord();
-        test.testQuTreatedLikeAConsonantAtTheBeginningOfAWord();
-        test.testQuAndAPrecedingConsonantTreatedLikeAConsonantAtTheBeginningOfAWord();
-        test.testThTreatedLikeAConsonantAtTheBeginningOfAWord();
-        test.testThrTreatedLikeAConsonantAtTheBeginningOfAWord();
-        test.testSchTreatedLikeAConsonantAtTheBeginningOfAWord();
-        test.testYtTreatedLikeAVowelAtTheBeginningOfAWord();
-        test.testXrTreatedLikeAVowelAtTheBeginningOfAWord();
-        test.testYTreatedLikeAConsonantAtTheBeginningOfAWord();
-        test.testYTreatedLikeAVowelAtTheEndOfAConsonantCluster();
-        test.testYAsSecondLetterInTwoLetterWord();
-        test.testAWholePhrase();
+        PrimeFactorsCalculatorTest test = new PrimeFactorsCalculatorTest();
+        test.setUp();
+        test.testNoFactors();
+        test.testPrimeNumber();
+        test.testAnotherPrimeNumber();
+        test.testSquareOfAPrime();
+        test.testProductOfFirstPrime();
+        test.testCubeOfAPrime();
+        test.testProductOfSecondPrime();
+        test.testProductOfThirdPrime();
+        test.testProductOfFirstAndSecondPrime();
+        test.testProductOfPrimesAndNonPrimes();
+        test.testProductOfPrimes();
+        test.testFactorsIncludingALargePrime();
 
     }
 }
