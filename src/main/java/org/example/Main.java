@@ -22,14 +22,21 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
-        RobotTest test = new RobotTest();
-
+        RunLengthEncodingTest test = new RunLengthEncodingTest();
         test.setUp();
-        test.hasName();
-        test.sameRobotsHaveSameNames();
-        test.differentRobotsHaveDifferentNames();
-        test.resetName();
-        test.robotNamesAreUnique();
+        test.encodeEmpty();
+        test.encodeWithOnlySingleValues();
+        test.encodeWithNoSingleValues();
+        test.encodeWithMixedValues();
+        test.encodeWithWhitespaceValues();
+        test.encodeWithLowercaseValues();
+        test.decodeEmpty();
+        test.decodeWithOnlySingleValues();
+        test.decodeWithNoSingleValues();
+        test.decodeWithMixedValues();
+        test.decodeWithWhitespaceValues();
+        test.decodeWithLowercaseValues();
+        test.encodeThenDecode();
 
     }
 }
