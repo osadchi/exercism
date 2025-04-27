@@ -14,23 +14,27 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class Main {
     public static void main(String[] args) {
 
-        AffineCipherTest test = new AffineCipherTest();
-        test.testEncodeYes();
-        test.testEncodeNo();
-        test.testEncodeOMG();
-        test.testEncodeO_M_G();
-        test.testEncodeMindBlowingly();
-        test.testEncodeNumbers();
-        test.testEncodeDeepThought();
-        test.testEncodeAllTheLetters();
-        test.testEncodeThrowsMeaningfulException();
-        test.testDecodeExercism();
-        test.testDecodeSentence();
-        test.testDecodeNumbers();
-        test.testDecodeAllTheLetters();
-        test.testDecodeWithNoSpaces();
-        test.testDecodeWithTooManySpaces();
-        test.testDecodeThrowsMeaningfulException();
+        BaseConverterTest test = new BaseConverterTest();
+        test.testSingleBitOneToDecimal();
+        test.testBinaryToSingleDecimal();
+        test.testSingleDecimalToBinary();
+        test.testBinaryToMultipleDecimal();
+        test.testDecimalToBinary();
+        test.testTrinaryToHexadecimal();
+        test.testHexadecimalToTrinary();
+        test.test15BitInteger();
+        test.testEmptyDigits();
+        test.testSingleZero();
+        test.testMultipleZeros();
+        test.testLeadingZeros();
+        test.testFirstBaseIsOne();
+        test.testFirstBaseIsZero();
+        test.testFirstBaseIsNegative();
+        test.testNegativeDigit();
+        test.testInvalidPositiveDigit();
+        test.testSecondBaseIsOne();
+        test.testSecondBaseIsZero();
+        test.testSecondBaseIsNegative();
 
     }
 }
