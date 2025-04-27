@@ -14,22 +14,35 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class Main {
     public static void main(String[] args) {
 
-        WordCountTest test = new WordCountTest();
+        StateOfTicTacToeTest test = new StateOfTicTacToeTest();
         test.setup();
-        test.countOneWord();
-        test.countOneOfEachWord();
-        test.multipleOccurrencesOfAWord();
-        test.handlesCrampedLists();
-        test.handlesExpandedLists();
-        test.ignorePunctuation();
-        test.includeNumbers();
-        test.normalizeCase();
-        test.withApostrophes();
-        test.substringsFromTheBeginning();
-        test.withQuotations();
-        test.multipleSpacesNotDetectedAsAWord();
-        test.alternatingWordSeperatorsNotDetectedAsAWord();
-        test.quotationForWordWithApostrophe();
+        test.testFinishedGameWhereXWonViaLeftColumnVictory();
+        test.testFinishedGameWhereXWonViaMiddleColumnVictory();
+        test.testFinishedGameWhereXWonViaRightColumnVictory();
+        test.testFinishedGameWhereOWonViaLeftColumnVictory();
+        test.testFinishedGameWhereOWonViaMiddleColumnVictory();
+        test.testFinishedGameWhereOWonViaRightColumnVictory();
+        test.testFinishedGameWhereXWonViaTopRowVictory();
+        test.testFinishedGameWhereXWonViaMiddleRowVictory();
+        test.testFinishedGameWhereXWonViaBottomRowVictory();
+        test.testFinishedGameWhereOWonViaTopRowVictory();
+        test.testFinishedGameWhereOWonViaMiddleRowVictory();
+        test.testFinishedGameWhereOWonViaBottomRowVictory();
+        test.testFinishedGameWhereXWonViaFallingDiagonalVictory();
+        test.testFinishedGameWhereXWonViaRisingDiagonalVictory();
+        test.testFinishedGameWhereOWonViaFallingDiagonalVictory();
+        test.testFinishedGameWhereOWonViaRisingDiagonalVictory();
+        test.testFinishedGameWhereXWonViaARowAndAColumnVictory();
+        test.testFinishedGameWhereXWonViaTwoDiagonalVictories();
+        test.testDraw();
+        test.testAnotherDraw();
+        test.testOngoingGameOneMoveIn();
+        test.testOngoingGameTwoMovesIn();
+        test.testOngoingGameFiveMovesIn();
+        test.testInvalidBoardXWentTwice();
+        test.testInvalidBoardOStarted();
+        test.testInvalidBoard();
+        test.testInvalidBoardPlayersKeptPlayingAfterAWin();
 
     }
 }
