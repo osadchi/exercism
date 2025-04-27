@@ -14,35 +14,23 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class Main {
     public static void main(String[] args) {
 
-        StateOfTicTacToeTest test = new StateOfTicTacToeTest();
-        test.setup();
-        test.testFinishedGameWhereXWonViaLeftColumnVictory();
-        test.testFinishedGameWhereXWonViaMiddleColumnVictory();
-        test.testFinishedGameWhereXWonViaRightColumnVictory();
-        test.testFinishedGameWhereOWonViaLeftColumnVictory();
-        test.testFinishedGameWhereOWonViaMiddleColumnVictory();
-        test.testFinishedGameWhereOWonViaRightColumnVictory();
-        test.testFinishedGameWhereXWonViaTopRowVictory();
-        test.testFinishedGameWhereXWonViaMiddleRowVictory();
-        test.testFinishedGameWhereXWonViaBottomRowVictory();
-        test.testFinishedGameWhereOWonViaTopRowVictory();
-        test.testFinishedGameWhereOWonViaMiddleRowVictory();
-        test.testFinishedGameWhereOWonViaBottomRowVictory();
-        test.testFinishedGameWhereXWonViaFallingDiagonalVictory();
-        test.testFinishedGameWhereXWonViaRisingDiagonalVictory();
-        test.testFinishedGameWhereOWonViaFallingDiagonalVictory();
-        test.testFinishedGameWhereOWonViaRisingDiagonalVictory();
-        test.testFinishedGameWhereXWonViaARowAndAColumnVictory();
-        test.testFinishedGameWhereXWonViaTwoDiagonalVictories();
-        test.testDraw();
-        test.testAnotherDraw();
-        test.testOngoingGameOneMoveIn();
-        test.testOngoingGameTwoMovesIn();
-        test.testOngoingGameFiveMovesIn();
-        test.testInvalidBoardXWentTwice();
-        test.testInvalidBoardOStarted();
-        test.testInvalidBoard();
-        test.testInvalidBoardPlayersKeptPlayingAfterAWin();
+        AffineCipherTest test = new AffineCipherTest();
+        test.testEncodeYes();
+        test.testEncodeNo();
+        test.testEncodeOMG();
+        test.testEncodeO_M_G();
+        test.testEncodeMindBlowingly();
+        test.testEncodeNumbers();
+        test.testEncodeDeepThought();
+        test.testEncodeAllTheLetters();
+        test.testEncodeThrowsMeaningfulException();
+        test.testDecodeExercism();
+        test.testDecodeSentence();
+        test.testDecodeNumbers();
+        test.testDecodeAllTheLetters();
+        test.testDecodeWithNoSpaces();
+        test.testDecodeWithTooManySpaces();
+        test.testDecodeThrowsMeaningfulException();
 
     }
 }
