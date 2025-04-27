@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
+import static java.util.Map.entry;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
@@ -14,27 +15,24 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class Main {
     public static void main(String[] args) {
 
-        BaseConverterTest test = new BaseConverterTest();
-        test.testSingleBitOneToDecimal();
-        test.testBinaryToSingleDecimal();
-        test.testSingleDecimalToBinary();
-        test.testBinaryToMultipleDecimal();
-        test.testDecimalToBinary();
-        test.testTrinaryToHexadecimal();
-        test.testHexadecimalToTrinary();
-        test.test15BitInteger();
-        test.testEmptyDigits();
-        test.testSingleZero();
-        test.testMultipleZeros();
-        test.testLeadingZeros();
-        test.testFirstBaseIsOne();
-        test.testFirstBaseIsZero();
-        test.testFirstBaseIsNegative();
-        test.testNegativeDigit();
-        test.testInvalidPositiveDigit();
-        test.testSecondBaseIsOne();
-        test.testSecondBaseIsZero();
-        test.testSecondBaseIsNegative();
+        AlphameticsTest test = new AlphameticsTest();
+        try
+        {
+            test.testThreeLetters();
+            test.testUniqueValue();
+            test.testLeadingZero();
+            test.testTwoDigitsFinalCarry();
+            test.testFourLetters();
+            test.testSixLetters();
+            test.testSevenLetters();
+            test.testEightLetters();
+            test.testTenLetters();
+            test.testTenLetters41Addends();
+        }
+        catch (UnsolvablePuzzleException e)
+        {
+            System.out.println("Unsolved");
+        }
 
     }
 }
