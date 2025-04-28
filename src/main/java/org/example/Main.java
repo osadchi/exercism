@@ -15,24 +15,150 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class Main {
     public static void main(String[] args) {
 
-        AlphameticsTest test = new AlphameticsTest();
+        BankAccountTest test = new BankAccountTest();
+        test.setUp();
         try
         {
-            test.testThreeLetters();
-            test.testUniqueValue();
-            test.testLeadingZero();
-            test.testTwoDigitsFinalCarry();
-            test.testFourLetters();
-            test.testSixLetters();
-            test.testSevenLetters();
-            test.testEightLetters();
-            test.testTenLetters();
-            test.testTenLetters41Addends();
+            test.newlyOpenedAccountHasEmptyBalance();
         }
-        catch (UnsolvablePuzzleException e)
+        catch (BankAccountActionInvalidException e)
         {
-            System.out.println("Unsolved");
+            System.out.println(e.getMessage());
         }
+        test.setUp();
+        try
+        {
+            test.singleDeposit();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.multipleDeposits();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.withdrawOnce();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.withdrawTwice();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.canDoMultipleOperationsSequentially();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.cannotCheckBalanceOfClosedAccount();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.cannotDepositIntoClosedAccount();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        test.cannotDepositIntoUnopenedAccount();
+        test.setUp();
+        try
+        {
+            test.cannotWithdrawFromClosedAccount();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        test.cannotCloseAnAccountThatWasNotOpened();
+        test.setUp();
+        try
+        {
+            test.cannotOpenAnAlreadyOpenedAccount();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.reopenedAccountDoesNotRetainBalance();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.cannotWithdrawMoreThanWasDeposited();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.cannotWithdrawNegativeAmount();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.cannotDepositNegativeAmount();
+        }
+        catch (BankAccountActionInvalidException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        test.setUp();
+        try
+        {
+            test.canHandleConcurrentTransactions();
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+
+
+
 
     }
 }
