@@ -15,81 +15,21 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class Main {
     public static void main(String[] args) {
 
-        BinarySearchTest test = new BinarySearchTest();
-        try
-        {
-            test.findsAValueInAnArrayWithOneElement();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        test.identifiesThatAValueIsNotFoundInTheArray();
-        test.aValueSmallerThanTheArraysSmallestValueIsNotFound();
-        try
-        {
-            test.findsAValueInTheMiddleOfAnArray();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        try
-        {
-            test.findsAValueAtTheBeginningOfAnArray();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        try
-        {
-            test.findsAValueAtTheEndOfAnArray();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        try
-        {
-            test.findsAValueInAnArrayOfOddLength();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        try
-        {
-            test.findsAValueInAnArrayOfEvenLength();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        try
-        {
-            test.aValueLargerThanTheArraysLargestValueIsNotFound();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        try
-        {
-            test.nothingIsFoundInAnEmptyArray();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        try
-        {
-            test.nothingIsFoundWhenTheLeftAndRightBoundCross();
-        }
-        catch (ValueNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-        }
+        BottleSongTest test = new BottleSongTest();
+        test.setup();
+        test.firstGenericVerse();
+        test.setup();
+        test.lastGenericVerse();
+        test.setup();
+        test.verseWithTwoBottles();
+        test.setup();
+        test.verseWithOneBottle();
+        test.setup();
+        test.firstTwoVerses();
+        test.setup();
+        test.lastThreeVerses();
+        test.setup();
+        test.allVerses();
 
 
 
