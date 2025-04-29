@@ -15,21 +15,38 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class Main {
     public static void main(String[] args) {
 
-        BottleSongTest test = new BottleSongTest();
-        test.setup();
-        test.firstGenericVerse();
-        test.setup();
-        test.lastGenericVerse();
-        test.setup();
-        test.verseWithTwoBottles();
-        test.setup();
-        test.verseWithOneBottle();
-        test.setup();
-        test.firstTwoVerses();
-        test.setup();
-        test.lastThreeVerses();
-        test.setup();
-        test.allVerses();
+        BowlingGameTest test = new BowlingGameTest();
+        test.shouldBeAbleToScoreAGameWithAllZeros();
+        test.shouldBeAbleToScoreAGameWithNoStrikesOrSpares();
+        test.aSpareFollowedByZerosIsWorthTenPoints();
+        test.pointsScoredInTheRollAfterASpareAreCountedTwice();
+        test.consecutiveSparesEachGetAOneRollBonus();
+        test.aSpareInTheLastFrameGetsAOneRollBonusThatIsCountedOnce();
+        test.aStrikeEarnsTenPointsInFrameWithASingleRoll();
+        test.pointsScoredInTheTwoRollsAfterAStrikeAreCountedTwiceAsABonus();
+        test.consecutiveStrikesEachGetTheTwoRollBonus();
+        test.aStrikeInTheLastFrameGetsATwoRollBonusThatIsCountedOnce();
+        test.rollingASpareWithTheTwoRollBonusDoesNotGetABonusRoll();
+        test.strikesWithTheTwoRollBonusDoNotGetBonusRolls();
+        test.lastTwoStrikesFollowedByOnlyLastBonusWithNonStrikePoints();
+        test.aStrikeWithTheOneRollBonusAfterASpareInTheLastFrameDoesNotGetABonus();
+        test.allStrikesIsAPerfectGame();
+        test.rollsCanNotScoreNegativePoints();
+        test.aRollCanNotScoreMoreThan10Points();
+        test.twoRollsInAFrameCanNotScoreMoreThan10Points();
+        test.bonusRollAfterAStrikeInTheLastFrameCanNotScoreMoreThan10Points();
+        test.twoBonusRollsAfterAStrikeInTheLastFrameCanNotScoreMoreThan10Points();
+        test.twoBonusRollsAfterAStrikeInTheLastFrameCanScoreMoreThan10PointsIfOneIsAStrike();
+        test.theSecondBonusRollsAfterAStrikeInTheLastFrameCanNotBeAStrikeIfTheFirstOneIsNotAStrike();
+        test.secondBonusRollAfterAStrikeInTheLastFrameCanNotScoreMoreThan10Points();
+        test.anUnstartedGameCanNotBeScored();
+        test.anIncompleteGameCanNotBeScored();
+        test.canNotRollIfGameAlreadyHasTenFrames();
+        test.bonusRollsForAStrikeInTheLastFrameMustBeRolledBeforeScoreCanBeCalculated();
+        test.bothBonusRollsForAStrikeInTheLastFrameMustBeRolledBeforeScoreCanBeCalculated();
+        test.bonusRollForASpareInTheLastFrameMustBeRolledBeforeScoreCanBeCalculated();
+        test.canNotRollAfterBonusRollForSpare();
+        test.canNotRollAfterBonusRollForStrike();
 
 
 
