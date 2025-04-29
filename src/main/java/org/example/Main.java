@@ -15,147 +15,81 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class Main {
     public static void main(String[] args) {
 
-        BankAccountTest test = new BankAccountTest();
-        test.setUp();
+        BinarySearchTest test = new BinarySearchTest();
         try
         {
-            test.newlyOpenedAccountHasEmptyBalance();
+            test.findsAValueInAnArrayWithOneElement();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
+        test.identifiesThatAValueIsNotFoundInTheArray();
+        test.aValueSmallerThanTheArraysSmallestValueIsNotFound();
         try
         {
-            test.singleDeposit();
+            test.findsAValueInTheMiddleOfAnArray();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
         try
         {
-            test.multipleDeposits();
+            test.findsAValueAtTheBeginningOfAnArray();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
         try
         {
-            test.withdrawOnce();
+            test.findsAValueAtTheEndOfAnArray();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
         try
         {
-            test.withdrawTwice();
+            test.findsAValueInAnArrayOfOddLength();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
         try
         {
-            test.canDoMultipleOperationsSequentially();
+            test.findsAValueInAnArrayOfEvenLength();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
         try
         {
-            test.cannotCheckBalanceOfClosedAccount();
+            test.aValueLargerThanTheArraysLargestValueIsNotFound();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
         try
         {
-            test.cannotDepositIntoClosedAccount();
+            test.nothingIsFoundInAnEmptyArray();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
-        test.cannotDepositIntoUnopenedAccount();
-        test.setUp();
         try
         {
-            test.cannotWithdrawFromClosedAccount();
+            test.nothingIsFoundWhenTheLeftAndRightBoundCross();
         }
-        catch (BankAccountActionInvalidException e)
+        catch (ValueNotFoundException e)
         {
             System.out.println(e.getMessage());
         }
-        test.setUp();
-        test.cannotCloseAnAccountThatWasNotOpened();
-        test.setUp();
-        try
-        {
-            test.cannotOpenAnAlreadyOpenedAccount();
-        }
-        catch (BankAccountActionInvalidException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        test.setUp();
-        try
-        {
-            test.reopenedAccountDoesNotRetainBalance();
-        }
-        catch (BankAccountActionInvalidException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        test.setUp();
-        try
-        {
-            test.cannotWithdrawMoreThanWasDeposited();
-        }
-        catch (BankAccountActionInvalidException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        test.setUp();
-        try
-        {
-            test.cannotWithdrawNegativeAmount();
-        }
-        catch (BankAccountActionInvalidException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        test.setUp();
-        try
-        {
-            test.cannotDepositNegativeAmount();
-        }
-        catch (BankAccountActionInvalidException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        test.setUp();
-        try
-        {
-            test.canHandleConcurrentTransactions();
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-
 
 
 
